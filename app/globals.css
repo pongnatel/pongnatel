@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: oklch(0.145 0.084 253.89);
+  --color-foreground: oklch(0.98 0.014 210);
+  --color-card: oklch(0.145 0.084 253.89);
+  --color-card-foreground: oklch(0.98 0.014 210);
+  --color-popover: oklch(0.145 0.084 253.89);
+  --color-popover-foreground: oklch(0.98 0.014 210);
+  --color-primary: oklch(0.98 0.014 210);
+  --color-primary-foreground: oklch(0.145 0.084 253.89);
+  --color-secondary: oklch(0.234 0.042 241.05);
+  --color-secondary-foreground: oklch(0.98 0.014 210);
+  --color-muted: oklch(0.234 0.042 241.05);
+  --color-muted-foreground: oklch(0.696 0.026 230.86);
+  --color-accent: oklch(0.234 0.042 241.05);
+  --color-accent-foreground: oklch(0.98 0.014 210);
+  --color-destructive: oklch(0.486 0.208 27.325);
+  --color-destructive-foreground: oklch(0.98 0.014 210);
+  --color-border: oklch(0.234 0.042 241.05);
+  --color-input: oklch(0.234 0.042 241.05);
+  --color-ring: oklch(0.871 0.035 226.81);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: #1e293b;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      sans-serif;
+  }
+}
+
+.section-container {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(51, 65, 85, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+}
+
+.section-container:hover {
+  background: rgba(15, 23, 42, 0.6);
+  border-color: rgba(20, 184, 166, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.professional-card {
+  background: transparent;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.tech-badge {
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  color: rgb(94, 234, 212);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-spacing {
+  margin-bottom: 4rem;
+}
+
+.experience-item {
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.experience-item:hover {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(20, 184, 166, 0.2);
+  transform: translateX(4px);
+}
+
+.date-text {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.company-link {
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.company-link:hover {
+  color: rgb(94, 234, 212);
+  transition: color 0.2s ease;
+}
+
+.description-text {
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.role-hierarchy {
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+}
+
+.section-icon {
+  width: 2rem;
+  height: 2rem;
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(94, 234, 212);
+}
+
+.hero-container {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(51, 65, 85, 0.3);
+  border-radius: 16px;
+  padding: 3rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.contact-card {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(51, 65, 85, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.contact-card:hover {
+  background: rgba(30, 41, 59, 0.6);
+  border-color: rgba(20, 184, 166, 0.2);
+}
+
+.skills-category {
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-card {
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.project-card:hover {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(20, 184, 166, 0.2);
+  transform: translateY(-2px);
+}
+
+.language-card {
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
