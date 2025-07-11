@@ -1,4 +1,4 @@
-import { Code } from "lucide-react"
+import { Code } from "lucide-react";
 
 const skillCategories = [
   {
@@ -13,7 +13,7 @@ const skillCategories = [
     category: "DevOps & Cloud",
     skills: ["AWS (EC2, S3)", "Docker", "Jenkins", "Ansible"],
   },
-]
+];
 
 export function SkillsSection() {
   return (
@@ -26,9 +26,11 @@ export function SkillsSection() {
       </div>
 
       <div className="space-y-6">
-        {skillCategories.map((category, categoryIndex) => (
+        {skillCategories.map((category) => (
           <div key={category.category} className="skills-category">
-            <h3 className="text-lg font-semibold text-white mb-4">{category.category}</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              {category.category}
+            </h3>
             <div className="flex flex-wrap gap-2">
               {category.skills.map((skill) => (
                 <span key={skill} className="tech-badge">
@@ -40,5 +42,5 @@ export function SkillsSection() {
         ))}
       </div>
     </div>
-  )
+  );
 }

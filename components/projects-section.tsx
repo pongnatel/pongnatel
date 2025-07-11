@@ -36,7 +36,7 @@ export function ProjectsSection() {
       </div>
 
       <div className="space-y-6">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div key={project.title} className="project-card">
             <h3 className="text-xl font-semibold text-white mb-2">
               {project.title} •{" "}

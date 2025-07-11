@@ -1,4 +1,4 @@
-import { ExternalLink, GraduationCap } from "lucide-react"
+import { ExternalLink, GraduationCap } from "lucide-react";
 
 export function EducationSection() {
   return (
@@ -25,10 +25,11 @@ export function EducationSection() {
             </h3>
             <p className="role-hierarchy">Honours • GPA: 3.3/4.0</p>
             <p className="description-text mb-6">
-              Comprehensive software engineering program focusing on mobile and web development, software architecture
-              and design, database systems, and DevOps & cloud computing. Developed strong foundation in programming
-              languages, frameworks, and modern development practices through hands-on projects and collaborative
-              learning.
+              Comprehensive software engineering program focusing on mobile and
+              web development, software architecture and design, database
+              systems, and DevOps & cloud computing. Developed strong foundation
+              in programming languages, frameworks, and modern development
+              practices through hands-on projects and collaborative learning.
             </p>
             <div className="flex flex-wrap gap-2">
               {[
@@ -47,5 +48,5 @@ export function EducationSection() {
         </div>
       </div>
     </div>
-  )
+  );
 }

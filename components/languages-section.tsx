@@ -1,4 +1,4 @@
-import { Languages } from "lucide-react"
+import { Languages } from "lucide-react";
 
 const languages = [
   {
@@ -9,7 +9,7 @@ const languages = [
     name: "English",
     level: "Highly Proficient",
   },
-]
+];
 
 export function LanguagesSection() {
   return (
@@ -22,13 +22,15 @@ export function LanguagesSection() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {languages.map((language, index) => (
+        {languages.map((language) => (
           <div key={language.name} className="language-card">
-            <h3 className="text-lg font-semibold text-white mb-2">{language.name}</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">
+              {language.name}
+            </h3>
             <p className="description-text">{language.level}</p>
           </div>
         ))}
       </div>
     </div>
-  )
+  );
 }
