@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
+const repoName = 'pongnatel';
+
 const nextConfig: NextConfig = {
   /* config options here */
+  basePath: '/' + repoName,
+  assetPrefix: '/' + repoName + '/',
   devIndicators: false,
   output: "export",
   trailingSlash: true,
