@@ -1,17 +1,21 @@
 import type { NextConfig } from "next";
 
-const repoName = 'pongnatel';
+const repoName = "pongnatel";
+const isExport = process.env.NEXT_EXPORT === "true";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  basePath: '/' + repoName,
-  assetPrefix: '/' + repoName + '/',
+  basePath: "/" + repoName,
+  assetPrefix: "/" + repoName + "/",
   devIndicators: false,
-  output: "export",
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
+  ...(isExport
+    ? {
+        output: "export",
+        trailingSlash: true,
+        images: { unoptimized: true },
+      }
+    : {
+        // Server mode: do not set output, trailingSlash, or images.unoptimized
+      }),
 };
 
 export default nextConfig;

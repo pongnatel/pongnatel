@@ -23,7 +23,7 @@ export function EducationSection() {
                 <ExternalLink className="h-4 w-4" />
               </a>
             </h3>
-            <p className="role-hierarchy">Honours • GPA: 3.3/4.0</p>
+            <p className="role-hierarchy">Honours • GPA: 3.4/4.0</p>
             <p className="description-text mb-6">
               Comprehensive software engineering program focusing on mobile and
               web development, software architecture and design, database

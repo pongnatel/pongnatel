@@ -9,7 +9,10 @@
     "start": "next start",
     "export": "next export",
     "deploy": "next build && gh-pages -d out",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:export": "NEXT_EXPORT=true next build && next export",
+    "serve:export": "npx serve out",
+    "build:server": "next build && next start"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",

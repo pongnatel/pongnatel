@@ -1,8 +1,8 @@
-import { ExternalLink, Briefcase } from "lucide-react"
+import { ExternalLink, Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    period: "Feb 2025 — May 2025",
+    period: "Mar 2024 — Oct 2024",
     title: "Frontend Developer",
     company: "INTEL PRODUCTS VIETNAM & DHL",
     companyUrl: "#",
@@ -11,7 +11,7 @@ const experiences = [
     technologies: ["ElectronJS", "Python", "VBA", "Data Processing"],
   },
   {
-    period: "Mar 2024 — Oct 2024",
+    period: "Feb 2025 — May 2025",
     title: "Intern Developer",
     company: "VNETWORK JSC",
     companyUrl: "#",
@@ -19,7 +19,7 @@ const experiences = [
       "Designed and implemented Drive feature using Go and TypeScript for the company's internal data center, supporting secure file uploads and sharing, and seamless AWS S3 integration. Enhanced data accessibility and reliability, streamlining workflows across multiple teams.",
     technologies: ["Go", "TypeScript", "AWS S3", "File Management"],
   },
-]
+];
 
 export function ExperienceSection() {
   return (
@@ -28,7 +28,9 @@ export function ExperienceSection() {
         <div className="section-icon">
           <Briefcase className="h-4 w-4" />
         </div>
-        <h2 className="text-2xl font-bold text-white">Professional Experience</h2>
+        <h2 className="text-2xl font-bold text-white">
+          Professional Experience
+        </h2>
       </div>
 
       <div className="space-y-6">
@@ -60,5 +62,5 @@ export function ExperienceSection() {
         ))}
       </div>
     </div>
-  )
+  );
 }
